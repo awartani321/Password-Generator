@@ -1,6 +1,6 @@
 var characterLength = 8;
 var choiceArray =[];
-
+//Arrays
 var specialCharactersArray =['!','@','#','$','%','^','&','*','(',')','-','_','<','>','/']
 var lowerCaseArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
 var upperCaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',]
@@ -28,7 +28,7 @@ function generatePassword() {
    
     // I would generatePassword based on the prompts
 var password ="";
-for(var i= 0); i < characterLength;){
+for(var i= 0; i < characterLength; i++){
 var randomIndex = Math.floor(Math.random() * choiceArray.length)
 password = password + choiceArray[randomIndex];
 }
@@ -55,9 +55,10 @@ function getPrompts() {
     }
     if (confirm("Would you like special characters in your password?")) {
         choiceArray = choiceArray.concat(specialCharactersArray);
-}
+    }
     if (confirm("Would you like numbers in your password?")) {
     choiceArray = choiceArray.concat(numberArray);
-}
+    }
 return true;
+}
 }
