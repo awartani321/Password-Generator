@@ -16,15 +16,16 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var correctPrompts = getPrompts(); // this will return true or false
-   
-    if(correctPrompts){
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-   }
+   
+if(correctPrompts){
+    var newPassword = generatePassword();
+    passwordText.value = newPassword;
+   } 
+   else { passwordText.value = "";
 }
 function generatePassword() {
+   
     // I would generatePassword based on the prompts
 var password ="";
 for(var i= 0); i < characterLength;){
