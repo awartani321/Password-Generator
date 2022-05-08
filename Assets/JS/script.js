@@ -6,14 +6,14 @@ var lowerCaseArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o
 var upperCaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',]
 var numberArray = ['1','2','3','4','5','6','7','8','9','0',]
 
-// Assignment Code
+// connecting the id to the html to generate a query for it
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button
+// this will listen for a click action
 generateBtn.addEventListener("click", writePassword);
 
 
-// Write password to the #password input
+// Calling prompts and added if and else statments
 function writePassword() {
   var correctPrompts = getPrompts(); // this will return true or false
   var passwordText = document.querySelector("#password");
@@ -26,7 +26,7 @@ if(correctPrompts){
 }
 function generatePassword() {
    
-    // I would generatePassword based on the prompts
+    // Generating random letters, (upper and lower case), numbers, and special characters
 var password ="";
 for(var i= 0; i < characterLength; i++){
 var randomIndex = Math.floor(Math.random() * choiceArray.length)
